@@ -75,36 +75,41 @@ class validator():
         else:
             return 'Not a valid Credit Card Number'
 
-def main():
-    print(Fore.GREEN + "  ██████╗░██╗░░░██╗███╗░░██╗░█████╗░██╗░░██╗███╗░░░███╗░█████╗░██████╗░███████╗ ")
-    print(Fore.GREEN + "  ██╔══██╗██║░░░██║████╗░██║██╔══██╗██║░░██║████╗░████║██╔══██╗██╔══██╗██╔════╝ ")
-    print(Fore.GREEN + "  ██████╔╝██║░░░██║██╔██╗██║██║░░╚═╝███████║██╔████╔██║███████║██║░░██║█████╗░░ ")
-    print(Fore.GREEN + "  ██║░░░░░╚██████╔╝██║░╚███║╚█████╔╝██║░░██║██║░╚═╝░██║██║░░██║██████╔╝███████╗ ")
-    print(Fore.GREEN + "  ╚═╝░░░░░░╚═════╝░╚═╝░░╚══╝░╚════╝░╚═╝░░╚═╝╚═╝░░░░░╚═╝╚═╝░░╚═╝╚═════╝░╚══════╝ ")
-    print(" ")
-    print(Fore.GREEN + "                 ██╗░░░░░░█████╗░░█████╗░██████╗░███████╗██████╗░")
-    print(Fore.GREEN + "                 ██║░░░░░██╔══██╗██╔══██╗██╔══██╗██╔════╝██╔══██╗")
-    print(Fore.GREEN + "                 ██║░░░░░██║░░██║██╔══██║██║░░██║██╔══╝░░██╔══██╗")
-    print(Fore.GREEN + "                 ██║░░░░░██║░░██║███████║██║░░██║█████╗░░██████╔╝")
-    print(Fore.GREEN + "                 ███████╗╚█████╔╝██║░░██║██████╔╝███████╗██║░░██║")
-    print(Fore.GREEN + "                 ╚══════╝░╚════╝░╚═╝░░╚═╝╚═════╝░╚══════╝╚═╝░░╚═╝")
-    print(" ")
-    print(" ")
-    print(Fore.WHITE + "                       made by kencarsonlover775 on discord")
-    print(" ")
-    print(" ")
-    print(Fore.WHITE + "How to use the cards: Make sure to have an aged account on amazon.com. If you do not, this may not work. Go to your payment methods and add the card as a Credit card/Debit card. Put your name on the card or someone else's, put a random expiration date, the CVV is going to be 000, and press add. After adding the card, wait 2-4 weeks before buying anything.")
 
-    print(" ")
-    print("1. 1k")
-    print("2. 2k")
-    print("3. 5k")
-    print("4. 10k")
-    print(" ")
-    whatcard = input("What Card Do You Want? (1, 2, 3 or 4) ")
-    print(" ")
-    whatcard = int(whatcard)
-    randomnums = "0123456789"
+
+print(Fore.GREEN + "  ██████╗░██╗░░░██╗███╗░░██╗░█████╗░██╗░░██╗███╗░░░███╗░█████╗░██████╗░███████╗ ")
+print(Fore.GREEN + "  ██╔══██╗██║░░░██║████╗░██║██╔══██╗██║░░██║████╗░████║██╔══██╗██╔══██╗██╔════╝ ")
+print(Fore.GREEN + "  ██████╔╝██║░░░██║██╔██╗██║██║░░╚═╝███████║██╔████╔██║███████║██║░░██║█████╗░░ ")
+print(Fore.GREEN + "  ██║░░░░░╚██████╔╝██║░╚███║╚█████╔╝██║░░██║██║░╚═╝░██║██║░░██║██████╔╝███████╗ ")
+print(Fore.GREEN + "  ╚═╝░░░░░░╚═════╝░╚═╝░░╚══╝░╚════╝░╚═╝░░╚═╝╚═╝░░░░░╚═╝╚═╝░░╚═╝╚═════╝░╚══════╝ ")
+print(" ")
+print(Fore.GREEN + "                 ██╗░░░░░░█████╗░░█████╗░██████╗░███████╗██████╗░")
+print(Fore.GREEN + "                 ██║░░░░░██╔══██╗██╔══██╗██╔══██╗██╔════╝██╔══██╗")
+print(Fore.GREEN + "                 ██║░░░░░██║░░██║██╔══██║██║░░██║██╔══╝░░██╔══██╗")
+print(Fore.GREEN + "                 ██║░░░░░██║░░██║███████║██║░░██║█████╗░░██████╔╝")
+print(Fore.GREEN + "                 ███████╗╚█████╔╝██║░░██║██████╔╝███████╗██║░░██║")
+print(Fore.GREEN + "                 ╚══════╝░╚════╝░╚═╝░░╚═╝╚═════╝░╚══════╝╚═╝░░╚═╝")
+print(" ")
+print(" ")
+print(Fore.WHITE + "                       made by kencarsonlover775 on discord")
+print(" ")
+print(" ")
+print("How to use the cards: Make sure to have a aged account on amazon.com if you do not this may not work. Go to your payment methods and add the card as a Credit card/Debit card put your name on the card or someone elses put a random experation date the cvv is gonna be 000 and press add. After adding the card wait 2-4 weeks before buying anything")
+
+
+
+
+
+print(" ")
+print("1. 1k")
+print("2. 2k")
+print("3. 5k")
+print("4. 10k")
+print(" ")
+whatcard = input("What Card Do You Want? (1, 2, 3 or 4) ")
+print(" ")
+whatcard = int(whatcard)
+randomnums = "0123456789"
 
 if whatcard == 1:
     howmany = input("How Many Cards Do You Want? ")
@@ -166,13 +171,3 @@ if whatcard == 4:
         ff6 = random.choice(randomnums)
         cc = str(bin)+str(ff1)+str(ff2)+str(ff3)+str(ff4)+str(ff5)+str(ff6)
         print(validator().validate(int(cc)))
-        
-    except ValueError as ve:
-        print(Fore.RED + str(ve))
-    except Exception as e:
-        print(Fore.RED + f"An error occurred: {e}")
-
-    input("Press Enter to exit...")  # Wait for the user to press Enter
-
-if __name__ == '__main__':
-    main()
