@@ -64,17 +64,16 @@ class validator():
             base = (base * 9) % 10
             if base == lastDigit:
                 print(Fore.GREEN)
-                return f'[!] {self.cardNumber} Is valid'
+                return f'[!] {self.cardNumber} Is not valid'
                 file = open("cards.txt", "w")
                 number = repr(number)
                 file.write(number)
                 file.close()
             else:
-                print(Fore.WHITE)
+                print(Fore.RED)
                 return f' {self.cardNumber} Is not valid'
         else:
             return 'Not a valid Credit Card Number'
-
 
 def main():
     print(Fore.GREEN + "  ██████╗░██╗░░░██╗███╗░░██╗░█████╗░██╗░░██╗███╗░░░███╗░█████╗░██████╗░███████╗ ")
