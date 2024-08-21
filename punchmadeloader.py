@@ -91,7 +91,7 @@ print(Fore.GREEN + "                 ███████╗╚█████�
 print(Fore.GREEN + "                 ╚══════╝░╚════╝░╚═╝░░╚═╝╚═════╝░╚══════╝╚═╝░░╚═╝")
 print(" ")
 print(" ")
-print(Fore.WHITE + "                                                        made by kencarsonlover775 on discord")
+print(Fore.WHITE + "                       made by kencarsonlover775 on discord")
 print(" ")
 print(" ")
 print(Fore.WHITE + "How to use the cards: Make sure to have a aged account on amazon.com if you do not this may not work. Go to your payment methods and add the card as a Credit card/Debit card put your name on the card or someone elses put a random experation date the cvv is gonna be 000 and press add. After adding the card wait 2-4 weeks before buying anything")
