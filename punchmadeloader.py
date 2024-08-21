@@ -74,9 +74,7 @@ class validator():
                 return f' {self.cardNumber} Is not valid'
         else:
             return 'Not a valid Credit Card Number'
-print(" ")
-print(" ")
-print(" ")
+
 print(Fore.GREEN + "  ██████╗░██╗░░░██╗███╗░░██╗░█████╗░██╗░░██╗███╗░░░███╗░█████╗░██████╗░███████╗ ")
 print(Fore.GREEN + "  ██╔══██╗██║░░░██║████╗░██║██╔══██╗██║░░██║████╗░████║██╔══██╗██╔══██╗██╔════╝ ")
 print(Fore.GREEN + "  ██████╔╝██║░░░██║██╔██╗██║██║░░╚═╝███████║██╔████╔██║███████║██║░░██║█████╗░░ ")
