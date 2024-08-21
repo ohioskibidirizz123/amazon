@@ -101,34 +101,71 @@ def main():
     print("3. 5k")
     print("4. 10k")
     print(" ")
-    
-    try:
-        whatcard = int(input("What Card Do You Want? (1, 2, 3 or 4) "))
-        if whatcard not in [1, 2, 3, 4]:
-            raise ValueError("Invalid choice. Please enter 1, 2, 3, or 4.")
-        
-        print(" ")
-        randomnums = "0123456789"
-        card_bins = {
-            1: "60457811425",
-            2: "604578114",
-            3: "604578118",
-            4: "6045781123"
-        }
-        
-        bin_prefix = card_bins[whatcard]
-        howmany = int(input("How Many Cards Do You Want? "))
-        
-        time.sleep(1.0)
-        print("Starting")
-        time.sleep(1.0)
-        
-        for _ in range(howmany):
-            length = 6 if whatcard == 1 else 7
-            random_suffix = ''.join(random.choice(randomnums) for _ in range(length))
-            card_number = bin_prefix + random_suffix
-            validator = Validator()
-            print(validator.validate(card_number))
+    whatcard = input("What Card Do You Want? (1, 2, 3 or 4) ")
+    print(" ")
+    whatcard = int(whatcard)
+    randomnums = "0123456789"
+
+if whatcard == 1:
+    howmany = input("How Many Cards Do You Want? ")
+    time.sleep(1.0)
+    print("Starting")
+    time.sleep(1.0)
+    howmany = int(howmany)
+
+    for x in range(howmany):
+        bin = "60457811425"
+        ff1 = random.choice(randomnums)
+        ff2 = random.choice(randomnums)
+        ff3 = random.choice(randomnums)
+        ff4 = random.choice(randomnums)
+        ff5 = random.choice(randomnums)
+        cc = str(bin) + str(ff1) + str(ff2) + str(ff3) + str(ff4) + str(ff5)
+        print(validator().validate(int(cc)))
+
+if whatcard == 2:
+    howmany = input("How Many Cards Do You Want? ")
+    howmany = int(howmany)
+    for x in range(howmany):
+        bin = "604578114"
+        ff1 = random.choice(randomnums)
+        ff2 = random.choice(randomnums)
+        ff3 = random.choice(randomnums)
+        ff4 = random.choice(randomnums)
+        ff5 = random.choice(randomnums)
+        ff6 = random.choice(randomnums)
+        ff7 = random.choice(randomnums)
+        cc = str(bin)+str(ff1)+str(ff2)+str(ff3)+str(ff4)+str(ff5)+str(ff6)+str(ff7)
+        print(validator().validate(int(cc)))
+
+if whatcard == 3:
+    howmany = input("How Many Cards Do You Want? ")
+    howmany = int(howmany)
+    for x in range(howmany):
+        bin = "604578118"
+        ff1 = random.choice(randomnums)
+        ff2 = random.choice(randomnums)
+        ff3 = random.choice(randomnums)
+        ff4 = random.choice(randomnums)
+        ff5 = random.choice(randomnums)
+        ff6 = random.choice(randomnums)
+        ff7 = random.choice(randomnums)
+        cc = str(bin)+str(ff1)+str(ff2)+str(ff3)+str(ff4)+str(ff5)+str(ff6)+str(ff7)
+        print(validator().validate(int(cc)))
+
+if whatcard == 4:
+    howmany = input("How Many Cards Do You Want? ")
+    howmany = int(howmany)
+    for x in range(howmany):
+        bin = "6045781123"
+        ff1 = random.choice(randomnums)
+        ff2 = random.choice(randomnums)
+        ff3 = random.choice(randomnums)
+        ff4 = random.choice(randomnums)
+        ff5 = random.choice(randomnums)
+        ff6 = random.choice(randomnums)
+        cc = str(bin)+str(ff1)+str(ff2)+str(ff3)+str(ff4)+str(ff5)+str(ff6)
+        print(validator().validate(int(cc)))
         
     except ValueError as ve:
         print(Fore.RED + str(ve))
