@@ -2,10 +2,16 @@ import random
 import time
 import colorama
 from colorama import Fore, Back, Style
-
 colorama.init()
 
-class Validator:
+
+
+
+
+
+
+class validator():
+
     def __init__(self):
         self.cardNumber = None
         self.Brand = None
@@ -19,7 +25,9 @@ class Validator:
             self.Brand = 'Diners Club - International'
         elif self.cardNumber[:2] in ['54']:
             self.Brand = 'Diners Club - USA & Canada'
-        elif self.cardNumber[:4] in ['6011'] or self.cardNumber[0:3] in ['644', '645', '646', '647', '648', '649'] or self.cardNumber[0:2] in ['65'] or self.cardNumber[0:6] in [str(x) for x in range(622126, 622926)]:
+        elif self.cardNumber[:4] in ['6011'] or self.cardNumber[0:3] in ['644', '645', '646', '647', '648',
+                                                                         '649'] or self.cardNumber[0:2] in [
+            '65'] or self.cardNumber[0:6] in [str(x) for x in range(622126, 622926)]:
             self.Brand = 'Discover'
         elif self.cardNumber[:3] in ['637', '638', '639']:
             self.Brand = 'InstaPayment'
@@ -27,7 +35,8 @@ class Validator:
             self.Brand = 'JCB'
         elif self.cardNumber[:4] in ['5018', '5020', '5038', '5893', '6304', '6759', '6761', '6762', '6763']:
             self.Brand = 'Maestro'
-        elif self.cardNumber[:2] in ['51', '52', '53', '54', '55'] or self.cardNumber[:6] in [str(x) for x in range(222100, 272100)]:
+        elif self.cardNumber[:2] in ['51', '52', '53', '54', '55'] or self.cardNumber[:6] in [str(x) for x in
+                                                                                              range(222100, 272100)]:
             self.Brand = 'MasterCard'
         elif self.cardNumber[:4] in ['4026', '4508', '4844', '4913', '4917'] or self.cardNumber[:6] == '417500':
             self.Brand = 'VISA Electron'
@@ -41,7 +50,8 @@ class Validator:
         number: str or int credit card number
         """
         if number is None: return 'Not a valid Credit Card Number'
-        if isinstance(number, bool) or isinstance(number, float): return 'Not a valid Credit Card Number'
+        if number is bool: return 'Not a valid Credit Card Number'
+        if number is float: return 'Not a valid Credit Card Number'
         number = ''.join(x for x in str(number).strip().split())
         if number.isdigit() and 13 <= len(number) <= 19:
             self.cardNumber = number
@@ -54,16 +64,17 @@ class Validator:
             base = (base * 9) % 10
             if base == lastDigit:
                 print(Fore.GREEN)
-                result = f'[!] {self.cardNumber} is valid'
-                file = open("cards.txt", "a")  # Open in append mode
-                file.write(result + "\n")
+                return f'[!] {self.cardNumber} Is valid'
+                file = open("cards.txt", "w")
+                number = repr(number)
+                file.write(number)
                 file.close()
             else:
                 print(Fore.WHITE)
-                result = f'{self.cardNumber} is not valid'
-            return result
+                return f' {self.cardNumber} Is not valid'
         else:
             return 'Not a valid Credit Card Number'
+
 
 def main():
     print(Fore.GREEN + "  ██████╗░██╗░░░██╗███╗░░██╗░█████╗░██╗░░██╗███╗░░░███╗░█████╗░██████╗░███████╗ ")
