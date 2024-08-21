@@ -11,7 +11,7 @@ def is_package_installed(package_name):
     return importlib.util.find_spec(package_name) is not None
 
 def main():
-    packages = ['colarama', 'times', 'random-number']  # Add your packages here
+    packages = ['colorama', 'times', 'random-number']  # Add your packages here
     
     for package in packages:
         if not is_package_installed(package):
