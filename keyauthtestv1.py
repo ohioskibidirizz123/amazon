@@ -47,6 +47,39 @@ if not keyauth.authenticate():
     print("Exiting...")
     sys.exit(1)
 
+# Your existing functions
+def run_command(command):
+    process = subprocess.run(command, shell=True, capture_output=True, text=True)
+    if process.returncode != 0:
+        print(Fore.RED + f"Error: {process.stderr}")
+        sys.exit(process.returncode)
+    print(Fore.GREEN + process.stdout)
+
+def check_and_install_packages():
+    print(Fore.CYAN + "Checking Python installation...")
+    try:
+        subprocess.run(["where", "python"], check=True, capture_output=True, text=True)
+    except subprocess.CalledProcessError:
+        print(Fore.RED + "Python not found. Please install Python from the Microsoft Store or check your PATH settings.")
+        input("Press Enter to exit...")
+        sys.exit(1)
+    print(Fore.GREEN + "Python is installed.")
+    print(Fore.CYAN + "Updating pip...")
+    run_command("py -m pip install --upgrade pip")
+    print(Fore.CYAN + "Installing Python packages...")
+    run_command("py -m pip install times")
+    run_command("py -m pip install colorama")
+    run_command("py -m pip install random-number")
+    print(Fore.GREEN + "Installation complete.")
+
+check_and_install_packages()
+
+# Rest of your existing code
+import os
+os.system('cls')
+
+# Your Validator class and other code remain unchanged
+
 # Initialize colorama
 colorama.init()
 
